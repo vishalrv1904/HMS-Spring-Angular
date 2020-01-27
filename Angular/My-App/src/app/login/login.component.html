@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+    <div class="container">
+     <div class="center">     
+  
+      <label for="name" ><b>UserName</b></label>
+      <input type="text" #name placeholder="Enter Name" name="name" required>
+       <br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" #password placeholder="Enter Password" name="psw" required>
+      <br><br>
+      <button  class="registerbtn" (click)="login(name.value,password.value)">Login</button>
+    </div>
+ 
+    </div>
+    
+  

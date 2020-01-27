@@ -1,0 +1,42 @@
+
+  <form #userlogin = "ngForm"  >
+
+    <label><b>UserName</b></label>
+        <input type="text" placeholder="Enter UserName" name="username" required ngModel><br>
+     
+
+    <label><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="password" required ngModel><br>
+
+    <label ><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstName" required ngModel><br>
+
+    <label ><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last name" name="lastName" required ngModel><br>
+
+    <label ><b>State</b></label>
+    <input type="text" placeholder="Enter State" name="state" required ngModel><br>
+
+    <label><b>City</b></label>
+    <input type="text" placeholder="Enter City" name="city" required ngModel><br>
+
+    <label ><b>Phonenumber</b></label>
+    <input type="text" placeholder="Enter phone" name="phoneNumber" required ngModel>
+
+    <label *ngIf="!show"><b>weight</b></label>
+    <input *ngIf="!show" type="text" placeholder="Enter weight" name="weight" required ngModel>
+
+    <label *ngIf="!show"><b>bloodGroup</b></label>
+    <input *ngIf="!show" type="text" placeholder="Enter bloodGroup" name="bloodGroup" required ngModel>
+
+    
+    <label *ngIf="show"><b>specilization</b></label>
+    <input *ngIf="show" type="text" placeholder="Enter specilization" name="specilization" required ngModel>
+
+    <button  *ngIf="show" type="submit" class="registerbtn" (click) = "AddDoctor(userlogin.value)">Add Doctor</button>
+
+    
+    <button *ngIf="!show" type="submit" class="registerbtn" (click) = "AddPatient(userlogin.value)">Add Patient</button>
+    
+ </form>
+ 
